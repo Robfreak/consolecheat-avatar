@@ -20,7 +20,7 @@ const JSON_LD = JSON.stringify({
   isPartOf: { "@type": "WebSite", name: "consolecheat", url: "https://consolecheat.com/" },
 });
 
-const THEME_BOOT = `(function(){try{var s=localStorage.getItem("consolecheat-theme");var t=s==="light"||s==="dark"?s:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=t;var c=t==="light"?"#f3f4f6":"#0e1116";var m=document.querySelector('meta[name="theme-color"]');if(!m){m=document.createElement("meta");m.setAttribute("name","theme-color");document.head.appendChild(m)}m.setAttribute("content",c)}catch(e){document.documentElement.dataset.theme="dark"}})();`;
+const THEME_BOOT = `(function(){try{var s=localStorage.getItem("consolecheat-theme");var t=s==="light"||s==="dark"?s:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=t;var c=t==="light"?"#f4f1eb":"#0e1116";var m=document.querySelector('meta[name="theme-color"]');if(!m){m=document.createElement("meta");m.setAttribute("name","theme-color");document.head.appendChild(m)}m.setAttribute("content",c)}catch(e){document.documentElement.dataset.theme="dark"}})();`;
 
 export const Route = createRootRoute({
   head: () => ({

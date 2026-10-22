@@ -44,7 +44,7 @@ function applyTheme(theme: "dark" | "light") {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem(THEME_KEY, theme);
   document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
-    meta.setAttribute("content", theme === "light" ? "#f3f4f6" : "#0e1116");
+    meta.setAttribute("content", theme === "light" ? "#f4f1eb" : "#0e1116");
   });
 }
 
@@ -61,19 +61,21 @@ function AvatarThumb({ avatar }: { avatar: Avatar }) {
   const [broken, setBroken] = useState(false);
   if (!avatar.image || broken) {
     return (
-      <div className="flex aspect-square items-center justify-center bg-raised text-sm text-subtle">
+      <div className="well flex aspect-square items-center justify-center font-display text-2xl text-subtle">
         {avatar.name.slice(0, 1)}
       </div>
     );
   }
   return (
-    <img
-      src={avatar.image}
-      alt={avatar.name}
-      loading="lazy"
-      className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.04]"
-      onError={() => setBroken(true)}
-    />
+    <div className="well flex aspect-square items-center justify-center p-4">
+      <img
+        src={avatar.image}
+        alt={avatar.name}
+        loading="lazy"
+        className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
+        onError={() => setBroken(true)}
+      />
+    </div>
   );
 }
 
@@ -387,7 +389,10 @@ export function AvatarTool() {
 
       <main className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 sm:py-12">
         <section className="max-w-2xl">
-          <p className="text-sm font-medium tracking-wide text-steel uppercase">{t("eyebrow")}</p>
+          <p className="flex items-center gap-3 text-xs font-medium tracking-[0.18em] text-steel uppercase">
+            <span className="h-px w-8 bg-steel" aria-hidden="true" />
+            {t("eyebrow")}
+          </p>
           <h1 className="mt-3 max-w-xl font-display text-4xl leading-[1.05] font-medium tracking-tight sm:text-6xl">{t("title")}</h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{t("lede")}</p>
           <ul className="mt-6 flex flex-wrap gap-2">
@@ -407,7 +412,7 @@ export function AvatarTool() {
         </section>
 
         <section className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-2xl border border-line bg-surface p-4 shadow-[0_24px_50px_-36px_rgba(0,0,0,0.65)] sm:p-5">
+          <div className="panel rounded-2xl p-4 sm:p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <h2 className="font-display text-xl font-medium">{t("cookieTitle")}</h2>
@@ -462,26 +467,26 @@ export function AvatarTool() {
             <p className="mt-2 text-sm text-subtle">{t("missingStores")}</p>
           </div>
 
-          <div className="rounded-2xl border border-line bg-surface p-4 shadow-[0_24px_50px_-36px_rgba(0,0,0,0.65)] sm:p-5">
+          <div className="panel rounded-2xl p-4 sm:p-5">
             <h2 className="font-display text-xl font-medium">{t("cartTitle")}</h2>
             <p className="mt-1 text-sm text-muted tabular-nums">
               {Math.min(cursor, freeTotal).toLocaleString()} / {freeTotal.toLocaleString()} {t("tried")}
             </p>
-            <div className="mt-3 h-2 overflow-hidden rounded-full bg-bg">
-              <div className="h-full bg-accent" style={{ width: `${percent}%` }} />
+            <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-bg">
+              <div className="h-full rounded-full bg-steel" style={{ width: `${percent}%` }} />
             </div>
             <dl className="mt-4 grid grid-cols-3 gap-2 text-center">
-              <div className="rounded-lg border border-line px-2 py-3">
+              <div className="rounded-xl bg-bg px-2 py-3">
                 <dt className="text-xs text-subtle">{t("statAdded")}</dt>
-                <dd className="mt-1 text-lg tabular-nums text-ok">{added}</dd>
+                <dd className="mt-1 font-display text-2xl tabular-nums text-ok">{added}</dd>
               </div>
-              <div className="rounded-lg border border-line px-2 py-3">
+              <div className="rounded-xl bg-bg px-2 py-3">
                 <dt className="text-xs text-subtle">{t("statSkipped")}</dt>
-                <dd className="mt-1 text-lg tabular-nums">{skipped}</dd>
+                <dd className="mt-1 font-display text-2xl tabular-nums">{skipped}</dd>
               </div>
-              <div className="rounded-lg border border-line px-2 py-3">
+              <div className="rounded-xl bg-bg px-2 py-3">
                 <dt className="text-xs text-subtle">{t("statFailed")}</dt>
-                <dd className="mt-1 text-lg tabular-nums text-bad">{failed}</dd>
+                <dd className="mt-1 font-display text-2xl tabular-nums text-bad">{failed}</dd>
               </div>
             </dl>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -553,7 +558,7 @@ export function AvatarTool() {
                 {t("showing")} {from.toLocaleString()}–{to.toLocaleString()} {t("of")} {visible.length.toLocaleString()}
               </p>
             </div>
-            <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
+            <div className="flex flex-col gap-2 rounded-2xl border border-line bg-surface/70 p-2 lg:flex-row lg:items-center">
               <label className="relative block w-full lg:max-w-xs">
                 <span className="sr-only">{t("searchLabel")}</span>
                 <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-subtle" />
@@ -576,7 +581,7 @@ export function AvatarTool() {
                     key={id}
                     type="button"
                     onClick={() => setPriceFilter(id)}
-                    className={`min-h-11 rounded-lg px-3 text-sm ${priceFilter === id ? "bg-accent text-accent-fg" : "border border-line text-muted"}`}
+                    className={`min-h-10 rounded-lg px-3 text-sm ${priceFilter === id ? "bg-accent text-accent-fg" : "text-muted"}`}
                     aria-pressed={priceFilter === id}
                   >
                     {t(key)}
@@ -618,7 +623,7 @@ export function AvatarTool() {
                 {pageItems.map((avatar) => {
                   const free = isFree(avatar);
                   return (
-                    <li key={avatar.sku} className="group overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-muted">
+                    <li key={avatar.sku} className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-muted">
                       <button
                         type="button"
                         onClick={() => setOpenSku((current) => (current === avatar.sku ? null : avatar.sku))}
@@ -627,13 +632,13 @@ export function AvatarTool() {
                       >
                         <AvatarThumb avatar={avatar} />
                       </button>
-                      <div className="flex flex-col gap-3 p-3">
+                      <div className="flex flex-1 flex-col gap-3 p-3">
                         <button
                           type="button"
                           onClick={() => setOpenSku((current) => (current === avatar.sku ? null : avatar.sku))}
                           className="text-left"
                         >
-                          <p className="line-clamp-2 text-sm leading-snug">{avatar.name}</p>
+                          <p className="line-clamp-2 min-h-10 text-sm leading-snug font-medium">{avatar.name}</p>
                           <p className="mt-2 text-sm">
                             <span className={`inline-flex rounded-full px-2 py-0.5 text-xs ${free ? "bg-ok/15 text-ok" : "bg-raised text-fg"}`}>
                               {free ? t("freeWord") : avatar.display || t("unavailable")}
@@ -658,7 +663,7 @@ export function AvatarTool() {
                           type="button"
                           disabled={!connected || running || busySku === avatar.sku}
                           onClick={() => void addSingle(avatar)}
-                          className="min-h-11 rounded-lg border border-line text-sm disabled:opacity-40"
+                          className="mt-auto min-h-10 rounded-lg bg-raised text-sm transition-colors hover:bg-accent hover:text-accent-fg disabled:opacity-40"
                         >
                           {busySku === avatar.sku ? t("adding") : t("addOne")}
                         </button>
@@ -692,7 +697,7 @@ export function AvatarTool() {
           ) : null}
         </section>
 
-        <section className="rounded-2xl border border-line bg-surface p-4 sm:p-5">
+        <section className="panel rounded-2xl p-4 sm:p-5">
           <div className="flex items-start gap-3">
             <Shield className="mt-1 size-4 shrink-0 text-subtle" aria-hidden="true" />
             <div>

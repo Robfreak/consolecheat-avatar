@@ -34,15 +34,15 @@
   }
 
   html[data-theme="light"] {
-    --color-bg: #f3f4f6;
-    --color-surface: #ffffff;
-    --color-raised: #e6e8ec;
-    --color-fg: #14171c;
-    --color-muted: #3d4450;
-    --color-subtle: #5e6672;
-    --color-line: #d8dce3;
-    --color-accent: #14171c;
-    --color-accent-fg: #f7f8f9;
+    --color-bg: #f4f1eb;
+    --color-surface: #fffcf8;
+    --color-raised: #efeae3;
+    --color-fg: #1a1714;
+    --color-muted: #4a453e;
+    --color-subtle: #746c62;
+    --color-line: #e3dbd0;
+    --color-accent: #1a1714;
+    --color-accent-fg: #f7f4ef;
     --color-ok: #1d6b43;
     --color-warn: #8a5b16;
     --color-bad: #a33b3b;
@@ -70,5 +70,21 @@
   ::selection {
     background: color-mix(in srgb, var(--color-fg) 16%, transparent);
     color: var(--color-fg);
+  }
+}
+
+@layer components {
+  .panel {
+    border: 1px solid var(--color-line);
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--color-fg) 5%, transparent), transparent 38%),
+      var(--color-surface);
+    box-shadow: 0 22px 44px -34px rgba(0, 0, 0, 0.55);
+  }
+
+  .well {
+    background:
+      radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--color-steel) 22%, transparent), transparent 68%),
+      var(--color-raised);
   }
 }
