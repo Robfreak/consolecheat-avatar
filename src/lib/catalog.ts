@@ -25,7 +25,8 @@ export function isFree(avatar: Avatar): boolean {
     label === "gratis" ||
     label === "무료" ||
     label === "免费" ||
-    label === "免費"
+    label === "免費" ||
+    label === "無料"
   );
 }
 

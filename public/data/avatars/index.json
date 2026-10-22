@@ -210,6 +210,13 @@
     "free": 537
   },
   {
+    "id": "jp",
+    "label": "Japan",
+    "locale": "ja-JP",
+    "count": 5094,
+    "free": 334
+  },
+  {
     "id": "kw",
     "label": "Kuwait",
     "locale": "en-KW",
