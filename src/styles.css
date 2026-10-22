@@ -13,6 +13,7 @@
   --color-ok: #9bbfa8;
   --color-warn: #d2b48a;
   --color-bad: #d98989;
+  --color-steel: #9bb4d4;
   --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
   --font-display: "Outfit", "Source Sans 3", sans-serif;
   --radius-lg: 0.75rem;
@@ -45,6 +46,7 @@
     --color-ok: #1d6b43;
     --color-warn: #8a5b16;
     --color-bad: #a33b3b;
+    --color-steel: #2c4d73;
     color-scheme: light;
   }
 
@@ -52,8 +54,17 @@
     margin: 0;
     min-height: 100vh;
     font-family: var(--font-sans);
-    background: var(--color-bg);
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(880px 420px at 8% -10%, color-mix(in srgb, var(--color-steel) 32%, transparent), transparent 64%),
+      radial-gradient(640px 360px at 100% 0%, color-mix(in srgb, var(--color-steel) 16%, transparent), transparent 60%);
+    background-attachment: fixed;
     color: var(--color-fg);
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--color-steel) 80%, var(--color-fg));
+    outline-offset: 2px;
   }
 
   ::selection {

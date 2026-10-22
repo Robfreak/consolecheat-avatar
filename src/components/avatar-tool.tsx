@@ -69,9 +69,9 @@ function AvatarThumb({ avatar }: { avatar: Avatar }) {
   return (
     <img
       src={avatar.image}
-      alt=""
+      alt={avatar.name}
       loading="lazy"
-      className="aspect-square w-full object-cover"
+      className="aspect-square w-full object-cover transition duration-300 group-hover:scale-[1.04]"
       onError={() => setBroken(true)}
     />
   );
@@ -320,19 +320,26 @@ export function AvatarTool() {
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-line">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
-          <div className="flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-lg border border-line bg-surface">
+      <header className="sticky top-0 z-30 border-b border-line bg-bg/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+          <a href="https://avatar.consolecheat.com/" className="flex items-center gap-3">
+            <span className="grid size-9 place-items-center rounded-lg border border-line bg-surface text-steel">
               <ShoppingBag className="size-4" aria-hidden="true" />
             </span>
-            <div>
-              <p className="font-display text-lg leading-none font-medium tracking-tight">consolecheat</p>
-              <p className="text-sm text-subtle">{t("unofficial")}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <p className="hidden text-sm text-muted sm:block">{connected ? t("connected") : t("disconnected")}</p>
+            <span>
+              <span className="block font-display text-lg leading-none font-medium tracking-tight">consolecheat</span>
+              <span className="mt-1 block text-sm text-subtle">{t("unofficial")}</span>
+            </span>
+          </a>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="https://consolecheat.com/"
+              className="hidden min-h-10 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-steel md:inline-flex"
+            >
+              {t("moreTools")}
+              <ExternalLink className="size-3.5" aria-hidden="true" />
+            </a>
+            <p className="hidden text-sm text-muted lg:block">{connected ? t("connected") : t("disconnected")}</p>
             <div className="flex rounded-lg border border-line bg-bg p-0.5" role="group" aria-label={t("theme")}>
               <button
                 type="button"
@@ -380,13 +387,27 @@ export function AvatarTool() {
 
       <main className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-8 sm:py-12">
         <section className="max-w-2xl">
-          <p className="text-sm font-medium tracking-wide text-muted uppercase">{t("eyebrow")}</p>
-          <h1 className="mt-3 font-display text-4xl leading-tight font-medium tracking-tight sm:text-5xl">{t("title")}</h1>
+          <p className="text-sm font-medium tracking-wide text-steel uppercase">{t("eyebrow")}</p>
+          <h1 className="mt-3 max-w-xl font-display text-4xl leading-[1.05] font-medium tracking-tight sm:text-6xl">{t("title")}</h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{t("lede")}</p>
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {(["featureRegions", "featureFree", "featurePaid"] as const).map((key) => (
+              <li key={key} className="rounded-full border border-line bg-surface/80 px-3 py-1.5 text-sm text-muted">
+                {t(key)}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://consolecheat.com/"
+            className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-surface px-4 text-sm text-steel md:hidden"
+          >
+            {t("moreTools")}
+            <ExternalLink className="size-3.5" aria-hidden="true" />
+          </a>
         </section>
 
         <section className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-2xl border border-line bg-surface p-4 sm:p-5">
+          <div className="rounded-2xl border border-line bg-surface p-4 shadow-[0_24px_50px_-36px_rgba(0,0,0,0.65)] sm:p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <h2 className="font-display text-xl font-medium">{t("cookieTitle")}</h2>
@@ -441,7 +462,7 @@ export function AvatarTool() {
             <p className="mt-2 text-sm text-subtle">{t("missingStores")}</p>
           </div>
 
-          <div className="rounded-2xl border border-line bg-surface p-4 sm:p-5">
+          <div className="rounded-2xl border border-line bg-surface p-4 shadow-[0_24px_50px_-36px_rgba(0,0,0,0.65)] sm:p-5">
             <h2 className="font-display text-xl font-medium">{t("cartTitle")}</h2>
             <p className="mt-1 text-sm text-muted tabular-nums">
               {Math.min(cursor, freeTotal).toLocaleString()} / {freeTotal.toLocaleString()} {t("tried")}
@@ -597,7 +618,7 @@ export function AvatarTool() {
                 {pageItems.map((avatar) => {
                   const free = isFree(avatar);
                   return (
-                    <li key={avatar.sku} className="overflow-hidden rounded-xl border border-line bg-surface">
+                    <li key={avatar.sku} className="group overflow-hidden rounded-xl border border-line bg-surface transition-colors hover:border-muted">
                       <button
                         type="button"
                         onClick={() => setOpenSku((current) => (current === avatar.sku ? null : avatar.sku))}
@@ -613,8 +634,10 @@ export function AvatarTool() {
                           className="text-left"
                         >
                           <p className="line-clamp-2 text-sm leading-snug">{avatar.name}</p>
-                          <p className={`mt-1 text-sm ${free ? "text-ok" : "text-fg"}`}>
-                            {free ? t("freeWord") : avatar.display || t("unavailable")}
+                          <p className="mt-2 text-sm">
+                            <span className={`inline-flex rounded-full px-2 py-0.5 text-xs ${free ? "bg-ok/15 text-ok" : "bg-raised text-fg"}`}>
+                              {free ? t("freeWord") : avatar.display || t("unavailable")}
+                            </span>
                             {avatar.platforms[0] ? <span className="text-subtle"> · {avatar.platforms.join(", ")}</span> : null}
                           </p>
                         </button>
@@ -699,6 +722,18 @@ export function AvatarTool() {
           <p className="mt-4 text-sm text-subtle">{t("domain")}</p>
         </section>
       </main>
+      <footer className="border-t border-line">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="font-display text-lg">consolecheat</p>
+            <p className="mt-1 max-w-md text-sm leading-relaxed text-muted">{t("moreToolsBody")}</p>
+          </div>
+          <a href="https://consolecheat.com/" className="inline-flex min-h-11 items-center gap-2 text-sm text-steel">
+            {t("moreTools")}
+            <ExternalLink className="size-3.5" aria-hidden="true" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
