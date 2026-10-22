@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  ChevronDown,
   CircleAlert,
   CircleCheck,
   ExternalLink,
@@ -48,9 +49,16 @@ function applyTheme(theme: "dark" | "light") {
   });
 }
 
-function flag(code: string): string {
-  if (!/^[a-z]{2}$/i.test(code)) return "";
-  return [...code.toUpperCase()].map((char) => String.fromCodePoint(0x1f1e6 + char.charCodeAt(0) - 65)).join("");
+function RegionFlag({ code }: { code: string }) {
+  return (
+    <img
+      src={`/flags/${code}.svg`}
+      alt=""
+      width={20}
+      height={15}
+      className="h-3.5 w-5 shrink-0 rounded-[2px] object-cover shadow-[0_0_0_1px_var(--color-line)]"
+    />
+  );
 }
 
 function guessRegion(regions: RegionInfo[]): string {
@@ -108,11 +116,29 @@ export function AvatarTool() {
   const [openSku, setOpenSku] = useState<string | null>(null);
   const [copiedSku, setCopiedSku] = useState<string | null>(null);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [regionOpen, setRegionOpen] = useState(false);
   const stopRef = useRef(false);
+  const regionBox = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
   }, []);
+
+  useEffect(() => {
+    if (!regionOpen) return;
+    function onPointer(event: PointerEvent) {
+      if (!regionBox.current?.contains(event.target as Node)) setRegionOpen(false);
+    }
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") setRegionOpen(false);
+    }
+    document.addEventListener("pointerdown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [regionOpen]);
 
   const freeList = useMemo(() => catalog.filter(isFree), [catalog]);
   const names = useMemo(() => {
@@ -324,6 +350,7 @@ export function AvatarTool() {
   const to = Math.min(visible.length, (safePage + 1) * PAGE_SIZE);
   const ready = catalogState === "ready";
   const help = t("cookieHelp").split("pdccws_p");
+  const selectedRegion = regions.find((entry) => entry.id === region);
 
   return (
     <div className="min-h-screen">
@@ -455,20 +482,56 @@ export function AvatarTool() {
             <label className="mt-5 block text-sm font-medium" htmlFor="region">
               {t("regionLabel")}
             </label>
-            <select
-              id="region"
-              value={region}
-              onChange={(event) => changeRegion(event.target.value)}
-              disabled={running || regions.length === 0}
-              className="mt-2 min-h-11 w-full rounded-lg border border-line bg-bg px-3 text-sm"
-            >
-              {regions.map((entry) => (
-                <option key={entry.id} value={entry.id}>
-                  {flag(entry.id)} {country(entry.id, entry.label)} · {entry.locale} · {entry.free.toLocaleString()} {t("priceFree").toLowerCase()} /{" "}
-                  {entry.count.toLocaleString()}
-                </option>
-              ))}
-            </select>
+            <div className="relative mt-2" ref={regionBox}>
+              <button
+                type="button"
+                id="region"
+                disabled={running || regions.length === 0}
+                aria-expanded={regionOpen}
+                aria-haspopup="listbox"
+                onClick={() => setRegionOpen((open) => !open)}
+                className="flex min-h-11 w-full items-center gap-2 rounded-lg border border-line bg-bg px-3 text-left text-sm disabled:opacity-40"
+              >
+                <RegionFlag code={region} />
+                <span className="min-w-0 flex-1 truncate">
+                  {selectedRegion
+                    ? `${country(selectedRegion.id, selectedRegion.label)} · ${selectedRegion.locale} · ${selectedRegion.free.toLocaleString()} ${t("priceFree").toLowerCase()} / ${selectedRegion.count.toLocaleString()}`
+                    : country(region, region.toUpperCase())}
+                </span>
+                <ChevronDown className={`size-4 shrink-0 text-subtle transition ${regionOpen ? "rotate-180" : ""}`} aria-hidden="true" />
+              </button>
+              {regionOpen ? (
+                <ul
+                  role="listbox"
+                  aria-labelledby="region"
+                  className="absolute z-40 mt-1 max-h-72 w-full overflow-auto rounded-lg border border-line bg-surface py-1 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)]"
+                >
+                  {regions.map((entry) => {
+                    const active = entry.id === region;
+                    return (
+                      <li key={entry.id}>
+                        <button
+                          type="button"
+                          role="option"
+                          aria-selected={active}
+                          onClick={() => {
+                            changeRegion(entry.id);
+                            setRegionOpen(false);
+                          }}
+                          className={`flex min-h-10 w-full items-center gap-2 px-3 text-left text-sm ${active ? "bg-accent text-accent-fg" : "hover:bg-raised"}`}
+                        >
+                          <RegionFlag code={entry.id} />
+                          <span className="min-w-0 flex-1 truncate">
+                            {country(entry.id, entry.label)} · {entry.locale} · {entry.free.toLocaleString()} {t("priceFree").toLowerCase()} /{" "}
+                            {entry.count.toLocaleString()}
+                          </span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : null}
+            </div>
             <p className="mt-2 text-sm text-subtle">{t("missingStores")}</p>
           </div>
 
