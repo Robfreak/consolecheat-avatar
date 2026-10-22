@@ -48,6 +48,11 @@ function applyTheme(theme: "dark" | "light") {
   });
 }
 
+function flag(code: string): string {
+  if (!/^[a-z]{2}$/i.test(code)) return "";
+  return [...code.toUpperCase()].map((char) => String.fromCodePoint(0x1f1e6 + char.charCodeAt(0) - 65)).join("");
+}
+
 function guessRegion(regions: RegionInfo[]): string {
   const locale = navigator.language.toLowerCase();
   const country = locale.split("-")[1];
@@ -459,7 +464,7 @@ export function AvatarTool() {
             >
               {regions.map((entry) => (
                 <option key={entry.id} value={entry.id}>
-                  {country(entry.id, entry.label)} · {entry.locale} · {entry.free.toLocaleString()} {t("priceFree").toLowerCase()} /{" "}
+                  {flag(entry.id)} {country(entry.id, entry.label)} · {entry.locale} · {entry.free.toLocaleString()} {t("priceFree").toLowerCase()} /{" "}
                   {entry.count.toLocaleString()}
                 </option>
               ))}
