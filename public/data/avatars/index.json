@@ -1,0 +1,478 @@
+[
+  {
+    "id": "ar",
+    "label": "Argentina",
+    "locale": "es-AR",
+    "count": 11994,
+    "free": 603
+  },
+  {
+    "id": "au",
+    "label": "Australia",
+    "locale": "en-AU",
+    "count": 14111,
+    "free": 546
+  },
+  {
+    "id": "at",
+    "label": "Austria",
+    "locale": "de-AT",
+    "count": 11176,
+    "free": 534
+  },
+  {
+    "id": "bh",
+    "label": "Bahrain",
+    "locale": "en-BH",
+    "count": 13261,
+    "free": 463
+  },
+  {
+    "id": "be",
+    "label": "Belgium",
+    "locale": "nl-BE",
+    "count": 14109,
+    "free": 522
+  },
+  {
+    "id": "bo",
+    "label": "Bolivia",
+    "locale": "es-BO",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "br",
+    "label": "Brazil",
+    "locale": "pt-BR",
+    "count": 11154,
+    "free": 589
+  },
+  {
+    "id": "bg",
+    "label": "Bulgaria",
+    "locale": "en-BG",
+    "count": 13885,
+    "free": 546
+  },
+  {
+    "id": "ca",
+    "label": "Canada",
+    "locale": "en-CA",
+    "count": 12931,
+    "free": 655
+  },
+  {
+    "id": "cl",
+    "label": "Chile",
+    "locale": "es-CL",
+    "count": 11998,
+    "free": 603
+  },
+  {
+    "id": "co",
+    "label": "Colombia",
+    "locale": "es-CO",
+    "count": 11247,
+    "free": 612
+  },
+  {
+    "id": "cr",
+    "label": "Costa Rica",
+    "locale": "es-CR",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "hr",
+    "label": "Croatia",
+    "locale": "en-HR",
+    "count": 14163,
+    "free": 546
+  },
+  {
+    "id": "cy",
+    "label": "Cyprus",
+    "locale": "en-CY",
+    "count": 13298,
+    "free": 531
+  },
+  {
+    "id": "cz",
+    "label": "Czechia",
+    "locale": "en-CZ",
+    "count": 14034,
+    "free": 552
+  },
+  {
+    "id": "dk",
+    "label": "Denmark",
+    "locale": "da-DK",
+    "count": 14109,
+    "free": 522
+  },
+  {
+    "id": "ec",
+    "label": "Ecuador",
+    "locale": "es-EC",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "sv",
+    "label": "El Salvador",
+    "locale": "es-SV",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "fi",
+    "label": "Finland",
+    "locale": "fi-FI",
+    "count": 14100,
+    "free": 522
+  },
+  {
+    "id": "fr",
+    "label": "France",
+    "locale": "fr-FR",
+    "count": 14154,
+    "free": 537
+  },
+  {
+    "id": "de",
+    "label": "Germany",
+    "locale": "de-DE",
+    "count": 14114,
+    "free": 516
+  },
+  {
+    "id": "gr",
+    "label": "Greece",
+    "locale": "en-GR",
+    "count": 14163,
+    "free": 552
+  },
+  {
+    "id": "gt",
+    "label": "Guatemala",
+    "locale": "es-GT",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "hn",
+    "label": "Honduras",
+    "locale": "es-HN",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "hu",
+    "label": "Hungary",
+    "locale": "en-HU",
+    "count": 14380,
+    "free": 552
+  },
+  {
+    "id": "is",
+    "label": "Iceland",
+    "locale": "en-IS",
+    "count": 13298,
+    "free": 532
+  },
+  {
+    "id": "in",
+    "label": "India",
+    "locale": "en-IN",
+    "count": 14128,
+    "free": 540
+  },
+  {
+    "id": "ie",
+    "label": "Ireland",
+    "locale": "en-IE",
+    "count": 14169,
+    "free": 558
+  },
+  {
+    "id": "il",
+    "label": "Israel",
+    "locale": "en-IL",
+    "count": 13944,
+    "free": 547
+  },
+  {
+    "id": "it",
+    "label": "Italy",
+    "locale": "it-IT",
+    "count": 14146,
+    "free": 537
+  },
+  {
+    "id": "kw",
+    "label": "Kuwait",
+    "locale": "en-KW",
+    "count": 13996,
+    "free": 473
+  },
+  {
+    "id": "lb",
+    "label": "Lebanon",
+    "locale": "en-LB",
+    "count": 13262,
+    "free": 463
+  },
+  {
+    "id": "lu",
+    "label": "Luxembourg",
+    "locale": "fr-LU",
+    "count": 14110,
+    "free": 526
+  },
+  {
+    "id": "mt",
+    "label": "Malta",
+    "locale": "en-MT",
+    "count": 13298,
+    "free": 532
+  },
+  {
+    "id": "mx",
+    "label": "Mexico",
+    "locale": "es-MX",
+    "count": 12797,
+    "free": 646
+  },
+  {
+    "id": "nl",
+    "label": "Netherlands",
+    "locale": "nl-NL",
+    "count": 14109,
+    "free": 522
+  },
+  {
+    "id": "nz",
+    "label": "New Zealand",
+    "locale": "en-NZ",
+    "count": 13992,
+    "free": 520
+  },
+  {
+    "id": "ni",
+    "label": "Nicaragua",
+    "locale": "es-NI",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "no",
+    "label": "Norway",
+    "locale": "no-NO",
+    "count": 14107,
+    "free": 522
+  },
+  {
+    "id": "om",
+    "label": "Oman",
+    "locale": "en-OM",
+    "count": 13263,
+    "free": 425
+  },
+  {
+    "id": "pa",
+    "label": "Panama",
+    "locale": "es-PA",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "py",
+    "label": "Paraguay",
+    "locale": "es-PY",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "pe",
+    "label": "Peru",
+    "locale": "es-PE",
+    "count": 11246,
+    "free": 612
+  },
+  {
+    "id": "pl",
+    "label": "Poland",
+    "locale": "pl-PL",
+    "count": 14108,
+    "free": 522
+  },
+  {
+    "id": "pt",
+    "label": "Portugal",
+    "locale": "pt-PT",
+    "count": 14108,
+    "free": 534
+  },
+  {
+    "id": "qa",
+    "label": "Qatar",
+    "locale": "en-QA",
+    "count": 13794,
+    "free": 474
+  },
+  {
+    "id": "ro",
+    "label": "Romania",
+    "locale": "en-RO",
+    "count": 13298,
+    "free": 532
+  },
+  {
+    "id": "ru",
+    "label": "Russia",
+    "locale": "ru-RU",
+    "count": 13861,
+    "free": 509
+  },
+  {
+    "id": "sa",
+    "label": "Saudi Arabia",
+    "locale": "ar-SA",
+    "count": 14449,
+    "free": 469
+  },
+  {
+    "id": "sk",
+    "label": "Slovakia",
+    "locale": "en-SK",
+    "count": 13300,
+    "free": 535
+  },
+  {
+    "id": "si",
+    "label": "Slovenia",
+    "locale": "en-SI",
+    "count": 14152,
+    "free": 546
+  },
+  {
+    "id": "za",
+    "label": "South Africa",
+    "locale": "en-ZA",
+    "count": 14497,
+    "free": 546
+  },
+  {
+    "id": "es",
+    "label": "Spain",
+    "locale": "es-ES",
+    "count": 14155,
+    "free": 540
+  },
+  {
+    "id": "se",
+    "label": "Sweden",
+    "locale": "sv-SE",
+    "count": 14105,
+    "free": 523
+  },
+  {
+    "id": "ch",
+    "label": "Switzerland",
+    "locale": "de-CH",
+    "count": 14006,
+    "free": 528
+  },
+  {
+    "id": "tr",
+    "label": "Turkey",
+    "locale": "tr-TR",
+    "count": 15363,
+    "free": 516
+  },
+  {
+    "id": "ua",
+    "label": "Ukraine",
+    "locale": "uk-UA",
+    "count": 14007,
+    "free": 508
+  },
+  {
+    "id": "ae",
+    "label": "United Arab Emirates",
+    "locale": "en-AE",
+    "count": 14709,
+    "free": 465
+  },
+  {
+    "id": "gb",
+    "label": "United Kingdom",
+    "locale": "en-GB",
+    "count": 14170,
+    "free": 557
+  },
+  {
+    "id": "us",
+    "label": "United States",
+    "locale": "en-US",
+    "count": 12920,
+    "free": 665
+  },
+  {
+    "id": "uy",
+    "label": "Uruguay",
+    "locale": "es-UY",
+    "count": 9170,
+    "free": 572
+  },
+  {
+    "id": "hk",
+    "label": "Hong Kong",
+    "locale": "en-HK",
+    "count": 4654,
+    "free": 137
+  },
+  {
+    "id": "tw",
+    "label": "Taiwan",
+    "locale": "zh-TW",
+    "count": 4634,
+    "free": 123
+  },
+  {
+    "id": "kr",
+    "label": "Korea",
+    "locale": "ko-KR",
+    "count": 4387,
+    "free": 115
+  },
+  {
+    "id": "sg",
+    "label": "Singapore",
+    "locale": "en-SG",
+    "count": 4505,
+    "free": 135
+  },
+  {
+    "id": "my",
+    "label": "Malaysia",
+    "locale": "en-MY",
+    "count": 4505,
+    "free": 135
+  },
+  {
+    "id": "th",
+    "label": "Thailand",
+    "locale": "en-TH",
+    "count": 4498,
+    "free": 135
+  },
+  {
+    "id": "id",
+    "label": "Indonesia",
+    "locale": "en-ID",
+    "count": 4498,
+    "free": 135
+  }
+]
