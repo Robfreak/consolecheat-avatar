@@ -5,9 +5,11 @@ import {
   ExternalLink,
   KeyRound,
   Loader2,
+  Moon,
   Search,
   Shield,
   ShoppingBag,
+  Sun,
 } from "lucide-react";
 import { addAvatarBatch, type ItemStatus } from "@/lib/add-to-cart";
 import { isFree, loadCatalog, loadRegions, type Avatar, type RegionInfo } from "@/lib/catalog";
@@ -15,6 +17,7 @@ import { useI18n, type Lang } from "@/lib/i18n";
 
 const TOKEN_KEY = "avatarlade-token";
 const REGION_KEY = "avatarlade-region";
+const THEME_KEY = "consolecheat-theme";
 const PAGE_SIZE = 24;
 const BATCH = 4;
 const indexKey = (region: string) => `avatarlade-index-${region}`;
@@ -35,6 +38,14 @@ function explainError(error: unknown, translate: (key: "workerMissing" | "shortC
   if (code === "invalid_cookie") return translate("shortCookie");
   if (code === "catalog_unavailable" || code === "unknown_region") return translate("loadError");
   return translate("requestFail");
+}
+
+function applyTheme(theme: "dark" | "light") {
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem(THEME_KEY, theme);
+  document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+    meta.setAttribute("content", theme === "light" ? "#f3f4f6" : "#0e1116");
+  });
 }
 
 function guessRegion(regions: RegionInfo[]): string {
@@ -89,7 +100,12 @@ export function AvatarTool() {
   const [busySku, setBusySku] = useState<string | null>(null);
   const [openSku, setOpenSku] = useState<string | null>(null);
   const [copiedSku, setCopiedSku] = useState<string | null>(null);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
   const stopRef = useRef(false);
+
+  useEffect(() => {
+    setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
+  }, []);
 
   const freeList = useMemo(() => catalog.filter(isFree), [catalog]);
   const names = useMemo(() => {
@@ -317,6 +333,32 @@ export function AvatarTool() {
           </div>
           <div className="flex items-center gap-3">
             <p className="hidden text-sm text-muted sm:block">{connected ? t("connected") : t("disconnected")}</p>
+            <div className="flex rounded-lg border border-line bg-bg p-0.5" role="group" aria-label={t("theme")}>
+              <button
+                type="button"
+                aria-pressed={theme === "dark"}
+                onClick={() => {
+                  applyTheme("dark");
+                  setTheme("dark");
+                }}
+                className={`inline-flex min-h-10 items-center gap-1.5 rounded-md px-2.5 text-sm ${theme === "dark" ? "bg-accent text-accent-fg" : "text-muted"}`}
+              >
+                <Moon className="size-3.5" aria-hidden="true" />
+                <span className="max-sm:sr-only">{t("themeDark")}</span>
+              </button>
+              <button
+                type="button"
+                aria-pressed={theme === "light"}
+                onClick={() => {
+                  applyTheme("light");
+                  setTheme("light");
+                }}
+                className={`inline-flex min-h-10 items-center gap-1.5 rounded-md px-2.5 text-sm ${theme === "light" ? "bg-accent text-accent-fg" : "text-muted"}`}
+              >
+                <Sun className="size-3.5" aria-hidden="true" />
+                <span className="max-sm:sr-only">{t("themeLight")}</span>
+              </button>
+            </div>
             <label className="sr-only" htmlFor="language">
               {t("language")}
             </label>

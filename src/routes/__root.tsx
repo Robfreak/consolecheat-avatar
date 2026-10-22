@@ -5,6 +5,8 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "consolecheat";
 
+const THEME_BOOT = `(function(){try{var s=localStorage.getItem("consolecheat-theme");var t=s==="light"||s==="dark"?s:(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.dataset.theme=t;var c=t==="light"?"#f3f4f6":"#0e1116";var m=document.querySelector('meta[name="theme-color"]');if(!m){m=document.createElement("meta");m.setAttribute("name","theme-color");document.head.appendChild(m)}m.setAttribute("content",c)}catch(e){document.documentElement.dataset.theme="dark"}})();`;
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -16,7 +18,6 @@ export const Route = createRootRoute({
         content:
           "Add free and paid PlayStation avatars to your own cart with your pdccws_p cookie. Every PSN store region.",
       },
-      { name: "theme-color", content: "#0e1116" },
       { property: "og:url", content: "https://avatar.consolecheat.com/" },
     ],
     links: [
@@ -36,6 +37,7 @@ export const Route = createRootRoute({
   component: () => (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
         <HeadContent />
       </head>
       <body>

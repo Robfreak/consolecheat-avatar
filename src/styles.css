@@ -29,6 +29,23 @@
   html {
     background: var(--color-bg);
     color: var(--color-fg);
+    color-scheme: dark;
+  }
+
+  html[data-theme="light"] {
+    --color-bg: #f3f4f6;
+    --color-surface: #ffffff;
+    --color-raised: #e6e8ec;
+    --color-fg: #14171c;
+    --color-muted: #3d4450;
+    --color-subtle: #5e6672;
+    --color-line: #d8dce3;
+    --color-accent: #14171c;
+    --color-accent-fg: #f7f8f9;
+    --color-ok: #1d6b43;
+    --color-warn: #8a5b16;
+    --color-bad: #a33b3b;
+    color-scheme: light;
   }
 
   body {
@@ -40,7 +57,7 @@
   }
 
   ::selection {
-    background: #2a3342;
+    background: color-mix(in srgb, var(--color-fg) 16%, transparent);
     color: var(--color-fg);
   }
 }

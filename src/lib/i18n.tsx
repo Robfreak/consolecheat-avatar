@@ -148,6 +148,9 @@ const en = {
   avatarId: "Avatar ID",
   copyId: "Copy ID",
   copied: "Copied",
+  theme: "Theme",
+  themeDark: "Dark",
+  themeLight: "Light",
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -228,6 +231,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatar-ID",
     copyId: "ID kopieren",
     copied: "Kopiert",
+    theme: "Darstellung",
+    themeDark: "Dunkel",
+    themeLight: "Hell",
   },
   fr: {
     unofficial: "Non officiel. Pas Sony.",
@@ -303,6 +309,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID de l’avatar",
     copyId: "Copier l’ID",
     copied: "Copié",
+    theme: "Thème",
+    themeDark: "Sombre",
+    themeLight: "Clair",
   },
   es: {
     unofficial: "No oficial. No es Sony.",
@@ -378,6 +387,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID del avatar",
     copyId: "Copiar ID",
     copied: "Copiado",
+    theme: "Tema",
+    themeDark: "Oscuro",
+    themeLight: "Claro",
   },
   pt: {
     unofficial: "Não oficial. Não é da Sony.",
@@ -453,6 +465,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID do avatar",
     copyId: "Copiar ID",
     copied: "Copiado",
+    theme: "Tema",
+    themeDark: "Escuro",
+    themeLight: "Claro",
   },
   it: {
     unofficial: "Non ufficiale. Non è Sony.",
@@ -528,6 +543,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatar",
     copyId: "Copia ID",
     copied: "Copiato",
+    theme: "Tema",
+    themeDark: "Scuro",
+    themeLight: "Chiaro",
   },
   nl: {
     unofficial: "Onofficieel. Niet van Sony.",
@@ -603,6 +621,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatar-ID",
     copyId: "ID kopiëren",
     copied: "Gekopieerd",
+    theme: "Thema",
+    themeDark: "Donker",
+    themeLight: "Licht",
   },
   pl: {
     unofficial: "Nieoficjalne. To nie Sony.",
@@ -678,6 +699,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID awatara",
     copyId: "Kopiuj ID",
     copied: "Skopiowano",
+    theme: "Motyw",
+    themeDark: "Ciemny",
+    themeLight: "Jasny",
   },
   sv: {
     unofficial: "Inofficiell. Inte Sony.",
@@ -753,6 +777,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatar-ID",
     copyId: "Kopiera ID",
     copied: "Kopierat",
+    theme: "Tema",
+    themeDark: "Mörkt",
+    themeLight: "Ljust",
   },
   da: {
     unofficial: "Uofficiel. Ikke Sony.",
@@ -828,6 +855,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatar-id",
     copyId: "Kopiér id",
     copied: "Kopieret",
+    theme: "Tema",
+    themeDark: "Mørk",
+    themeLight: "Lys",
   },
   no: {
     unofficial: "Uoffisiell. Ikke Sony.",
@@ -903,6 +933,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatar-ID",
     copyId: "Kopier ID",
     copied: "Kopiert",
+    theme: "Tema",
+    themeDark: "Mørk",
+    themeLight: "Lys",
   },
   fi: {
     unofficial: "Epävirallinen. Ei Sony.",
@@ -978,6 +1011,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatarin tunnus",
     copyId: "Kopioi tunnus",
     copied: "Kopioitu",
+    theme: "Teema",
+    themeDark: "Tumma",
+    themeLight: "Vaalea",
   },
   cs: {
     unofficial: "Neoficiální. Není od Sony.",
@@ -1053,6 +1089,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatara",
     copyId: "Kopírovat ID",
     copied: "Zkopírováno",
+    theme: "Motiv",
+    themeDark: "Tmavý",
+    themeLight: "Světlý",
   },
   sk: {
     unofficial: "Neoficiálne. Nie je od Sony.",
@@ -1128,6 +1167,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatara",
     copyId: "Kopírovať ID",
     copied: "Skopírované",
+    theme: "Motív",
+    themeDark: "Tmavý",
+    themeLight: "Svetlý",
   },
   hu: {
     unofficial: "Nem hivatalos. Nem a Sony.",
@@ -1203,6 +1245,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatarazonosító",
     copyId: "Azonosító másolása",
     copied: "Másolva",
+    theme: "Téma",
+    themeDark: "Sötét",
+    themeLight: "Világos",
   },
   ro: {
     unofficial: "Neoficial. Nu este Sony.",
@@ -1278,6 +1323,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatar",
     copyId: "Copiază ID",
     copied: "Copiat",
+    theme: "Temă",
+    themeDark: "Întunecat",
+    themeLight: "Luminos",
   },
   bg: {
     unofficial: "Неофициално. Не е Sony.",
@@ -1353,6 +1401,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID на аватара",
     copyId: "Копирай ID",
     copied: "Копирано",
+    theme: "Тема",
+    themeDark: "Тъмна",
+    themeLight: "Светла",
   },
   hr: {
     unofficial: "Neslužbeno. Nije Sony.",
@@ -1428,6 +1479,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatara",
     copyId: "Kopiraj ID",
     copied: "Kopirano",
+    theme: "Tema",
+    themeDark: "Tamna",
+    themeLight: "Svijetla",
   },
   el: {
     unofficial: "Ανεπίσημο. Όχι η Sony.",
@@ -1503,6 +1557,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatar",
     copyId: "Αντιγραφή ID",
     copied: "Αντιγράφηκε",
+    theme: "Θέμα",
+    themeDark: "Σκούρο",
+    themeLight: "Ανοιχτό",
   },
   tr: {
     unofficial: "Resmi değil. Sony değil.",
@@ -1578,6 +1635,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "Avatar kimliği",
     copyId: "Kimliği kopyala",
     copied: "Kopyalandı",
+    theme: "Tema",
+    themeDark: "Koyu",
+    themeLight: "Açık",
   },
   ru: {
     unofficial: "Неофициально. Не Sony.",
@@ -1653,6 +1713,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID аватара",
     copyId: "Копировать ID",
     copied: "Скопировано",
+    theme: "Тема",
+    themeDark: "Тёмная",
+    themeLight: "Светлая",
   },
   uk: {
     unofficial: "Неофіційно. Не Sony.",
@@ -1728,6 +1791,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID аватара",
     copyId: "Копіювати ID",
     copied: "Скопійовано",
+    theme: "Тема",
+    themeDark: "Темна",
+    themeLight: "Світла",
   },
   ar: {
     unofficial: "غير رسمي. ليس من سوني.",
@@ -1803,6 +1869,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "معرّف الصورة",
     copyId: "نسخ المعرّف",
     copied: "تم النسخ",
+    theme: "المظهر",
+    themeDark: "داكن",
+    themeLight: "فاتح",
   },
   he: {
     unofficial: "לא רשמי. לא סוני.",
@@ -1878,6 +1947,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "מזהה אווטאר",
     copyId: "העתקת מזהה",
     copied: "הועתק",
+    theme: "ערכת נושא",
+    themeDark: "כהה",
+    themeLight: "בהיר",
   },
   ja: {
     unofficial: "非公式。ソニーではありません。",
@@ -1953,6 +2025,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "アバターID",
     copyId: "IDをコピー",
     copied: "コピーしました",
+    theme: "表示",
+    themeDark: "ダーク",
+    themeLight: "ライト",
   },
   ko: {
     unofficial: "비공식. Sony가 아닙니다.",
@@ -2028,6 +2103,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "아바타 ID",
     copyId: "ID 복사",
     copied: "복사됨",
+    theme: "테마",
+    themeDark: "다크",
+    themeLight: "라이트",
   },
   zh: {
     unofficial: "非官方。不是索尼。",
@@ -2103,6 +2181,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "头像 ID",
     copyId: "复制 ID",
     copied: "已复制",
+    theme: "主题",
+    themeDark: "深色",
+    themeLight: "浅色",
   },
   "zh-Hant": {
     unofficial: "非官方。不是 Sony。",
@@ -2178,6 +2259,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "虛擬形象 ID",
     copyId: "複製 ID",
     copied: "已複製",
+    theme: "主題",
+    themeDark: "深色",
+    themeLight: "淺色",
   },
   th: {
     unofficial: "ไม่เป็นทางการ ไม่ใช่ Sony",
@@ -2253,6 +2337,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "รหัสอวาตาร์",
     copyId: "คัดลอกรหัส",
     copied: "คัดลอกแล้ว",
+    theme: "ธีม",
+    themeDark: "มืด",
+    themeLight: "สว่าง",
   },
   id: {
     unofficial: "Tidak resmi. Bukan Sony.",
@@ -2328,6 +2415,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatar",
     copyId: "Salin ID",
     copied: "Disalin",
+    theme: "Tema",
+    themeDark: "Gelap",
+    themeLight: "Terang",
   },
   ms: {
     unofficial: "Tidak rasmi. Bukan Sony.",
@@ -2403,6 +2493,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatar",
     copyId: "Salin ID",
     copied: "Disalin",
+    theme: "Tema",
+    themeDark: "Gelap",
+    themeLight: "Terang",
   },
   vi: {
     unofficial: "Không chính thức. Không phải Sony.",
@@ -2478,6 +2571,9 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     avatarId: "ID avatar",
     copyId: "Sao chép ID",
     copied: "Đã sao chép",
+    theme: "Giao diện",
+    themeDark: "Tối",
+    themeLight: "Sáng",
   },
 };
 
