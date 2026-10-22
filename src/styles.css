@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0e1116;
-  --color-surface: #171b22;
-  --color-raised: #1f242d;
-  --color-fg: #f4f5f7;
-  --color-muted: #a3aab6;
-  --color-subtle: #6e7684;
-  --color-line: #2c333e;
-  --color-accent: #e7ebf0;
-  --color-accent-fg: #0e1116;
-  --color-ok: #9bbfa8;
+  --color-bg: #07090e;
+  --color-surface: #10141c;
+  --color-raised: #171c27;
+  --color-fg: #f3f5f8;
+  --color-muted: #a7b0c0;
+  --color-subtle: #7c8696;
+  --color-line: #2a3344;
+  --color-accent: #0070d1;
+  --color-accent-fg: #ffffff;
+  --color-ok: #8fceab;
   --color-warn: #d2b48a;
-  --color-bad: #d98989;
-  --color-steel: #9bb4d4;
+  --color-bad: #e09898;
+  --color-steel: #7eb6ff;
   --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
   --font-display: "Outfit", "Source Sans 3", sans-serif;
   --radius-lg: 0.75rem;
@@ -41,8 +41,8 @@
     --color-muted: #4a453e;
     --color-subtle: #746c62;
     --color-line: #e3dbd0;
-    --color-accent: #1a1714;
-    --color-accent-fg: #f7f4ef;
+    --color-accent: #0070d1;
+    --color-accent-fg: #ffffff;
     --color-ok: #1d6b43;
     --color-warn: #8a5b16;
     --color-bad: #a33b3b;
@@ -56,8 +56,8 @@
     font-family: var(--font-sans);
     background-color: var(--color-bg);
     background-image:
-      radial-gradient(880px 420px at 8% -10%, color-mix(in srgb, var(--color-steel) 32%, transparent), transparent 64%),
-      radial-gradient(640px 360px at 100% 0%, color-mix(in srgb, var(--color-steel) 16%, transparent), transparent 60%);
+      radial-gradient(920px 460px at 12% -12%, color-mix(in srgb, var(--color-accent) 42%, transparent), transparent 62%),
+      radial-gradient(680px 380px at 100% 0%, color-mix(in srgb, var(--color-steel) 18%, transparent), transparent 58%);
     background-attachment: fixed;
     color: var(--color-fg);
   }
@@ -84,7 +84,7 @@
 
   .well {
     background:
-      radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--color-steel) 22%, transparent), transparent 68%),
+      radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 70%),
       var(--color-raised);
   }
 }

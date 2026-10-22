@@ -44,7 +44,7 @@ function applyTheme(theme: "dark" | "light") {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem(THEME_KEY, theme);
   document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
-    meta.setAttribute("content", theme === "light" ? "#f4f1eb" : "#0e1116");
+    meta.setAttribute("content", theme === "light" ? "#f4f1eb" : "#07090e");
   });
 }
 
@@ -322,10 +322,10 @@ export function AvatarTool() {
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-30 border-b border-line bg-bg/80 backdrop-blur-md">
+      <header className="sticky top-0 z-30 border-b border-line bg-bg/80 shadow-[inset_0_2px_0_var(--color-accent)] backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
           <a href="https://avatar.consolecheat.com/" className="flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-lg border border-line bg-surface text-steel">
+            <span className="grid size-9 place-items-center rounded-lg bg-accent text-accent-fg">
               <ShoppingBag className="size-4" aria-hidden="true" />
             </span>
             <span>
