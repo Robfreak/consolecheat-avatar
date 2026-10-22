@@ -33,9 +33,14 @@ jobs:
       - name: Build
         env:
           VITE_AUTH_ENABLED: "false"
+          VITE_BASE: /consolecheat-avatar/
         run: npm run build
       - name: Static marker
-        run: touch .vercel/output/static/.nojekyll
+        run: |
+          cp .vercel/output/static/_shell.html .vercel/output/static/index.html
+          cp .vercel/output/static/_shell.html .vercel/output/static/404.html
+          rm -f .vercel/output/static/CNAME
+          touch .vercel/output/static/.nojekyll
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:
