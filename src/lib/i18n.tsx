@@ -156,6 +156,8 @@ const en = {
   featureRegions: "Every PSN region",
   featureFree: "Free avatars in one run",
   featurePaid: "Prices shown before you add",
+  checkout: "PlayStation checkout",
+  checkoutHint: "No cookie for a single avatar: PlayStation checkout opens with it already added. Sign in there. Adding every free avatar still uses the cookie.",
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -244,6 +246,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Alle PSN-Regionen",
     featureFree: "Gratis-Avatare in einem Durchgang",
     featurePaid: "Preis steht vor dem Hinzufügen",
+    checkout: "PlayStation-Kasse",
+    checkoutHint: "Für einen einzelnen Avatar brauchst du keinen Cookie: die PlayStation-Kasse öffnet sich damit. Dort anmelden. Alle Gratis auf einmal geht weiter über den Cookie.",
   },
   fr: {
     unofficial: "Non officiel. Pas Sony.",
@@ -327,6 +331,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Toutes les régions PSN",
     featureFree: "Avatars gratuits en une fois",
     featurePaid: "Le prix s'affiche avant l'ajout",
+    checkout: "Caisse PlayStation",
+    checkoutHint: "Pas de cookie pour un seul avatar : la caisse PlayStation s’ouvre avec lui. Connectez-vous là-bas. Tout ajouter d’un coup utilise encore le cookie.",
   },
   es: {
     unofficial: "No oficial. No es Sony.",
@@ -410,6 +416,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Todas las regiones de PSN",
     featureFree: "Avatares gratis de una vez",
     featurePaid: "El precio se ve antes de añadir",
+    checkout: "Caja de PlayStation",
+    checkoutHint: "Sin cookie para un solo avatar: se abre la caja de PlayStation con él. Inicia sesión allí. Añadir todos los gratis sigue usando la cookie.",
   },
   pt: {
     unofficial: "Não oficial. Não é da Sony.",
@@ -493,6 +501,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Todas as regiões da PSN",
     featureFree: "Avatares grátis de uma vez",
     featurePaid: "O preço aparece antes de adicionar",
+    checkout: "Caixa da PlayStation",
+    checkoutHint: "Sem cookie para um avatar: a caixa da PlayStation abre com ele. Entre lá. Adicionar todos os grátis ainda usa o cookie.",
   },
   it: {
     unofficial: "Non ufficiale. Non è Sony.",
@@ -576,6 +586,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Tutte le regioni PSN",
     featureFree: "Avatar gratuiti in un colpo",
     featurePaid: "Il prezzo si vede prima di aggiungere",
+    checkout: "Cassa PlayStation",
+    checkoutHint: "Niente cookie per un solo avatar: si apre la cassa PlayStation con quello. Accedi lì. Aggiungerli tutti gratis usa ancora il cookie.",
   },
   nl: {
     unofficial: "Onofficieel. Niet van Sony.",
@@ -659,6 +671,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Elke PSN-regio",
     featureFree: "Gratis avatars in één keer",
     featurePaid: "De prijs staat er vóór je toevoegt",
+    checkout: "PlayStation-kassa",
+    checkoutHint: "Geen cookie voor één avatar: de PlayStation-kassa opent ermee. Log daar in. Alles gratis tegelijk gebruikt nog de cookie.",
   },
   pl: {
     unofficial: "Nieoficjalne. To nie Sony.",
@@ -742,6 +756,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Każdy region PSN",
     featureFree: "Darmowe awatary za jednym razem",
     featurePaid: "Cena jest widoczna przed dodaniem",
+    checkout: "Kasa PlayStation",
+    checkoutHint: "Bez ciasteczka dla jednego awatara: kasa PlayStation otwiera się z nim. Zaloguj się tam. Wszystkie darmowe naraz nadal używają ciasteczka.",
   },
   sv: {
     unofficial: "Inofficiell. Inte Sony.",
@@ -825,6 +841,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Alla PSN-regioner",
     featureFree: "Gratisavatarer i ett svep",
     featurePaid: "Priset syns innan du lägger till",
+    checkout: "PlayStation-kassan",
+    checkoutHint: "Ingen cookie för en avatar: PlayStations kassa öppnas med den. Logga in där. Alla gratis på en gång använder fortfarande cookien.",
   },
   da: {
     unofficial: "Uofficiel. Ikke Sony.",
@@ -908,6 +926,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Alle PSN-regioner",
     featureFree: "Gratisavatars i ét hug",
     featurePaid: "Prisen vises, før du tilføjer",
+    checkout: "PlayStation-kassen",
+    checkoutHint: "Ingen cookie til én avatar: PlayStations kasse åbner med den. Log ind der. Alle gratis på én gang bruger stadig cookien.",
   },
   no: {
     unofficial: "Uoffisiell. Ikke Sony.",
@@ -991,6 +1011,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Alle PSN-regioner",
     featureFree: "Gratisavatarer i ett drag",
     featurePaid: "Prisen vises før du legger til",
+    checkout: "PlayStation-kassen",
+    checkoutHint: "Ingen cookie for én avatar: PlayStations kasse åpnes med den. Logg inn der. Alle gratis på én gang bruker fortsatt cookien.",
   },
   fi: {
     unofficial: "Epävirallinen. Ei Sony.",
@@ -1074,6 +1096,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Kaikki PSN-alueet",
     featureFree: "Ilmaisavatarit kerralla",
     featurePaid: "Hinta näkyy ennen lisäämistä",
+    checkout: "PlayStation-kassa",
+    checkoutHint: "Ei evästettä yhdelle avatarille: PlayStation-kassa avautuu sen kanssa. Kirjaudu siellä. Kaikki ilmaiset kerralla käyttävät yhä evästettä.",
   },
   cs: {
     unofficial: "Neoficiální. Není od Sony.",
@@ -1157,6 +1181,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Všechny regiony PSN",
     featureFree: "Avatary zdarma najednou",
     featurePaid: "Cena je vidět před přidáním",
+    checkout: "Pokladna PlayStation",
+    checkoutHint: "Bez cookie pro jeden avatar: otevře se pokladna PlayStation s ním. Přihlaste se tam. Všechny zdarma najednou pořád používají cookie.",
   },
   sk: {
     unofficial: "Neoficiálne. Nie je od Sony.",
@@ -1240,6 +1266,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Všetky regióny PSN",
     featureFree: "Avatary zadarmo naraz",
     featurePaid: "Cena je vidieť pred pridaním",
+    checkout: "Pokladňa PlayStation",
+    checkoutHint: "Bez cookie pre jeden avatar: otvorí sa pokladňa PlayStation s ním. Prihláste sa tam. Všetky zadarmo naraz stále používajú cookie.",
   },
   hu: {
     unofficial: "Nem hivatalos. Nem a Sony.",
@@ -1323,6 +1351,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Minden PSN-régió",
     featureFree: "Ingyen avatarok egy menetben",
     featurePaid: "Az ár hozzáadás előtt látszik",
+    checkout: "PlayStation pénztár",
+    checkoutHint: "Egy avatarnál nem kell cookie: a PlayStation pénztár azzal nyílik meg. Ott jelentkezz be. Az összes ingyenest továbbra is a cookie adja hozzá.",
   },
   ro: {
     unofficial: "Neoficial. Nu este Sony.",
@@ -1406,6 +1436,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Toate regiunile PSN",
     featureFree: "Avataruri gratuite dintr-o dată",
     featurePaid: "Prețul apare înainte să adaugi",
+    checkout: "Casa PlayStation",
+    checkoutHint: "Fără cookie pentru un avatar: se deschide casa PlayStation cu el. Autentifică-te acolo. Toate gratuite dintr-o dată folosesc în continuare cookie-ul.",
   },
   bg: {
     unofficial: "Неофициално. Не е Sony.",
@@ -1489,6 +1521,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Всички PSN региони",
     featureFree: "Безплатни аватари наведнъж",
     featurePaid: "Цената се вижда преди добавяне",
+    checkout: "Каса на PlayStation",
+    checkoutHint: "Без бисквитка за един аватар: касата на PlayStation се отваря с него. Влезте там. Всички безплатни наведнъж пак минават през бисквитката.",
   },
   hr: {
     unofficial: "Neslužbeno. Nije Sony.",
@@ -1572,6 +1606,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Sve PSN regije",
     featureFree: "Besplatni avatari odjednom",
     featurePaid: "Cijena se vidi prije dodavanja",
+    checkout: "Blagajna PlayStationa",
+    checkoutHint: "Bez kolačića za jedan avatar: otvara se PlayStation blagajna s njim. Prijavite se tamo. Svi besplatni odjednom i dalje koriste kolačić.",
   },
   el: {
     unofficial: "Ανεπίσημο. Όχι η Sony.",
@@ -1655,6 +1691,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Κάθε περιοχή PSN",
     featureFree: "Δωρεάν avatar με μία κίνηση",
     featurePaid: "Η τιμή φαίνεται πριν την προσθήκη",
+    checkout: "Ταμείο PlayStation",
+    checkoutHint: "Χωρίς cookie για ένα avatar: ανοίγει το ταμείο της PlayStation με αυτό. Συνδεθείτε εκεί. Όλα τα δωρεάν μαζί χρησιμοποιούν ακόμα το cookie.",
   },
   tr: {
     unofficial: "Resmi değil. Sony değil.",
@@ -1738,6 +1776,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Tüm PSN bölgeleri",
     featureFree: "Ücretsiz avatarlar tek seferde",
     featurePaid: "Fiyat eklemeden önce görünür",
+    checkout: "PlayStation kasası",
+    checkoutHint: "Tek avatar için çerez gerekmez: PlayStation kasası onunla açılır. Orada oturum açın. Tüm ücretsizleri birden eklemek hâlâ çerezi kullanır.",
   },
   ru: {
     unofficial: "Неофициально. Не Sony.",
@@ -1821,6 +1861,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Все регионы PSN",
     featureFree: "Бесплатные аватары за один проход",
     featurePaid: "Цена видна до добавления",
+    checkout: "Касса PlayStation",
+    checkoutHint: "Для одного аватара cookie не нужен: откроется касса PlayStation с ним. Войдите там. Все бесплатные сразу по-прежнему через cookie.",
   },
   uk: {
     unofficial: "Неофіційно. Не Sony.",
@@ -1904,6 +1946,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Усі регіони PSN",
     featureFree: "Безкоштовні аватари за один прохід",
     featurePaid: "Ціна видна до додавання",
+    checkout: "Каса PlayStation",
+    checkoutHint: "Для одного аватара cookie не потрібен: відкриється каса PlayStation із ним. Увійдіть там. Усі безкоштовні одразу й далі через cookie.",
   },
   ar: {
     unofficial: "غير رسمي. ليس من سوني.",
@@ -1987,6 +2031,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "كل مناطق PSN",
     featureFree: "الصور المجانية دفعة واحدة",
     featurePaid: "السعر يظهر قبل الإضافة",
+    checkout: "دفع PlayStation",
+    checkoutHint: "بدون كوكي لأفاتار واحد: تفتح صفحة دفع PlayStation وهو مضاف. سجّل الدخول هناك. إضافة كل المجاني دفعة واحدة ما زالت تستخدم الكوكي.",
   },
   he: {
     unofficial: "לא רשמי. לא סוני.",
@@ -2070,6 +2116,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "כל אזורי PSN",
     featureFree: "אווטארים בחינם במהלך אחד",
     featurePaid: "המחיר מופיע לפני ההוספה",
+    checkout: "קופת PlayStation",
+    checkoutHint: "בלי עוגייה לאווטאר אחד: קופת PlayStation נפתחת איתו. מתחברים שם. הוספת כל החינמיים בבת אחת עדיין דרך העוגייה.",
   },
   ja: {
     unofficial: "非公式。ソニーではありません。",
@@ -2153,6 +2201,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "すべてのPSN地域",
     featureFree: "無料アバターをまとめて追加",
     featurePaid: "追加前に価格を表示",
+    checkout: "PlayStationの会計",
+    checkoutHint: "1体ならCookie不要。PlayStationの会計がそのアバター入りで開きます。そこでサインイン。無料をまとめて入れるには今までどおりCookieです。",
   },
   ko: {
     unofficial: "비공식. Sony가 아닙니다.",
@@ -2236,6 +2286,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "모든 PSN 지역",
     featureFree: "무료 아바타를 한 번에",
     featurePaid: "담기 전에 가격 표시",
+    checkout: "PlayStation 결제",
+    checkoutHint: "아바타 하나는 쿠키 없이 됩니다. PlayStation 결제가 담긴 채로 열립니다. 거기서 로그인하세요. 무료를 한 번에 담는 것은 여전히 쿠키를 씁니다.",
   },
   zh: {
     unofficial: "非官方。不是索尼。",
@@ -2319,6 +2371,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "所有 PSN 区域",
     featureFree: "免费虚拟形象一次加入",
     featurePaid: "加入前显示价格",
+    checkout: "PlayStation 结账",
+    checkoutHint: "单个虚拟形象不用 Cookie：PlayStation 结账会带着它打开。在那里登录。一次性加入全部免费的仍使用 Cookie。",
   },
   "zh-Hant": {
     unofficial: "非官方。不是 Sony。",
@@ -2402,6 +2456,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "所有 PSN 地區",
     featureFree: "免費虛擬形象一次加入",
     featurePaid: "加入前顯示價格",
+    checkout: "PlayStation 結帳",
+    checkoutHint: "單個虛擬形象不用 Cookie：PlayStation 結帳會帶著它開啟。在那裡登入。一次加入全部免費的仍使用 Cookie。",
   },
   th: {
     unofficial: "ไม่เป็นทางการ ไม่ใช่ Sony",
@@ -2485,6 +2541,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "ทุกภูมิภาค PSN",
     featureFree: "อวาตาร์ฟรีในครั้งเดียว",
     featurePaid: "เห็นราคาก่อนเพิ่ม",
+    checkout: "ชำระเงิน PlayStation",
+    checkoutHint: "อวาตาร์เดียวไม่ต้องใช้คุกกี้: หน้าชำระเงิน PlayStation เปิดมาพร้อมอวาตาร์นั้น เข้าสู่ระบบที่นั่น การใส่ฟรีทั้งหมดยังใช้คุกกี้",
   },
   id: {
     unofficial: "Tidak resmi. Bukan Sony.",
@@ -2568,6 +2626,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Semua wilayah PSN",
     featureFree: "Avatar gratis sekaligus",
     featurePaid: "Harga terlihat sebelum ditambahkan",
+    checkout: "Kasir PlayStation",
+    checkoutHint: "Tanpa cookie untuk satu avatar: kasir PlayStation terbuka dengan avatar itu. Masuk di sana. Menambahkan semua yang gratis sekaligus tetap memakai cookie.",
   },
   ms: {
     unofficial: "Tidak rasmi. Bukan Sony.",
@@ -2651,6 +2711,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Semua rantau PSN",
     featureFree: "Avatar percuma sekali gus",
     featurePaid: "Harga kelihatan sebelum ditambah",
+    checkout: "Kaunter PlayStation",
+    checkoutHint: "Tanpa kuki untuk satu avatar: kaunter PlayStation terbuka dengannya. Log masuk di sana. Semua percuma sekali gus masih guna kuki.",
   },
   vi: {
     unofficial: "Không chính thức. Không phải Sony.",
@@ -2734,6 +2796,8 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featureRegions: "Mọi khu vực PSN",
     featureFree: "Avatar miễn phí trong một lượt",
     featurePaid: "Giá hiện trước khi thêm",
+    checkout: "Thanh toán PlayStation",
+    checkoutHint: "Một avatar không cần cookie: trang thanh toán PlayStation mở với avatar đó. Đăng nhập ở đó. Thêm mọi avatar miễn phí một lúc vẫn dùng cookie.",
   },
 };
 

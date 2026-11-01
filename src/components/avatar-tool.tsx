@@ -49,6 +49,12 @@ function applyTheme(theme: "dark" | "light") {
   });
 }
 
+const PSN_CHECKOUT_CLIENT = "49f17b2f-bd8d-424b-bf5e-43786fb33be5";
+
+function checkoutUrl(sku: string): string {
+  return `https://checkout.playstation.com/add/${encodeURIComponent(sku)}?clientId=${PSN_CHECKOUT_CLIENT}`;
+}
+
 function RegionFlag({ code }: { code: string }) {
   return (
     <img
@@ -533,6 +539,7 @@ export function AvatarTool() {
               ) : null}
             </div>
             <p className="mt-2 text-sm text-subtle">{t("missingStores")}</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted">{t("checkoutHint")}</p>
           </div>
 
           <div className="panel rounded-2xl p-4 sm:p-5">
@@ -727,14 +734,25 @@ export function AvatarTool() {
                             </button>
                           </div>
                         ) : null}
-                        <button
-                          type="button"
-                          disabled={!connected || running || busySku === avatar.sku}
-                          onClick={() => void addSingle(avatar)}
-                          className="mt-auto min-h-10 rounded-lg bg-raised text-sm transition-colors hover:bg-accent hover:text-accent-fg disabled:opacity-40"
-                        >
-                          {busySku === avatar.sku ? t("adding") : t("addOne")}
-                        </button>
+                        <div className="mt-auto flex flex-col gap-2">
+                          <button
+                            type="button"
+                            disabled={!connected || running || busySku === avatar.sku}
+                            onClick={() => void addSingle(avatar)}
+                            className="min-h-10 rounded-lg bg-raised text-sm transition-colors hover:bg-accent hover:text-accent-fg disabled:opacity-40"
+                          >
+                            {busySku === avatar.sku ? t("adding") : t("addOne")}
+                          </button>
+                          <a
+                            href={checkoutUrl(avatar.sku)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-lg border border-line px-3 text-sm text-steel"
+                          >
+                            {t("checkout")}
+                            <ExternalLink className="size-3.5" aria-hidden="true" />
+                          </a>
+                        </div>
                       </div>
                     </li>
                   );
