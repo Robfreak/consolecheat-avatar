@@ -158,6 +158,7 @@ const en = {
   featurePaid: "Prices shown before you add",
   checkout: "PlayStation checkout",
   checkoutHint: "No cookie for a single avatar: PlayStation checkout opens with it already added. Sign in there. Adding every free avatar still uses the cookie.",
+  guides: "Guides",
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -248,6 +249,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Preis steht vor dem Hinzufügen",
     checkout: "PlayStation-Kasse",
     checkoutHint: "Für einen einzelnen Avatar brauchst du keinen Cookie: die PlayStation-Kasse öffnet sich damit. Dort anmelden. Alle Gratis auf einmal geht weiter über den Cookie.",
+    guides: "Anleitung",
   },
   fr: {
     unofficial: "Non officiel. Pas Sony.",
@@ -333,6 +335,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Le prix s'affiche avant l'ajout",
     checkout: "Caisse PlayStation",
     checkoutHint: "Pas de cookie pour un seul avatar : la caisse PlayStation s’ouvre avec lui. Connectez-vous là-bas. Tout ajouter d’un coup utilise encore le cookie.",
+    guides: "Guide",
   },
   es: {
     unofficial: "No oficial. No es Sony.",
@@ -418,6 +421,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "El precio se ve antes de añadir",
     checkout: "Caja de PlayStation",
     checkoutHint: "Sin cookie para un solo avatar: se abre la caja de PlayStation con él. Inicia sesión allí. Añadir todos los gratis sigue usando la cookie.",
+    guides: "Guía",
   },
   pt: {
     unofficial: "Não oficial. Não é da Sony.",
@@ -503,6 +507,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "O preço aparece antes de adicionar",
     checkout: "Caixa da PlayStation",
     checkoutHint: "Sem cookie para um avatar: a caixa da PlayStation abre com ele. Entre lá. Adicionar todos os grátis ainda usa o cookie.",
+    guides: "Guia",
   },
   it: {
     unofficial: "Non ufficiale. Non è Sony.",
@@ -588,6 +593,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Il prezzo si vede prima di aggiungere",
     checkout: "Cassa PlayStation",
     checkoutHint: "Niente cookie per un solo avatar: si apre la cassa PlayStation con quello. Accedi lì. Aggiungerli tutti gratis usa ancora il cookie.",
+    guides: "Guida",
   },
   nl: {
     unofficial: "Onofficieel. Niet van Sony.",
@@ -673,6 +679,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "De prijs staat er vóór je toevoegt",
     checkout: "PlayStation-kassa",
     checkoutHint: "Geen cookie voor één avatar: de PlayStation-kassa opent ermee. Log daar in. Alles gratis tegelijk gebruikt nog de cookie.",
+    guides: "Uitleg",
   },
   pl: {
     unofficial: "Nieoficjalne. To nie Sony.",
@@ -758,6 +765,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Cena jest widoczna przed dodaniem",
     checkout: "Kasa PlayStation",
     checkoutHint: "Bez ciasteczka dla jednego awatara: kasa PlayStation otwiera się z nim. Zaloguj się tam. Wszystkie darmowe naraz nadal używają ciasteczka.",
+    guides: "Poradnik",
   },
   sv: {
     unofficial: "Inofficiell. Inte Sony.",
@@ -843,6 +851,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Priset syns innan du lägger till",
     checkout: "PlayStation-kassan",
     checkoutHint: "Ingen cookie för en avatar: PlayStations kassa öppnas med den. Logga in där. Alla gratis på en gång använder fortfarande cookien.",
+    guides: "Guide",
   },
   da: {
     unofficial: "Uofficiel. Ikke Sony.",
@@ -928,6 +937,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Prisen vises, før du tilføjer",
     checkout: "PlayStation-kassen",
     checkoutHint: "Ingen cookie til én avatar: PlayStations kasse åbner med den. Log ind der. Alle gratis på én gang bruger stadig cookien.",
+    guides: "Guide",
   },
   no: {
     unofficial: "Uoffisiell. Ikke Sony.",
@@ -1013,6 +1023,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Prisen vises før du legger til",
     checkout: "PlayStation-kassen",
     checkoutHint: "Ingen cookie for én avatar: PlayStations kasse åpnes med den. Logg inn der. Alle gratis på én gang bruker fortsatt cookien.",
+    guides: "Guide",
   },
   fi: {
     unofficial: "Epävirallinen. Ei Sony.",
@@ -1098,6 +1109,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Hinta näkyy ennen lisäämistä",
     checkout: "PlayStation-kassa",
     checkoutHint: "Ei evästettä yhdelle avatarille: PlayStation-kassa avautuu sen kanssa. Kirjaudu siellä. Kaikki ilmaiset kerralla käyttävät yhä evästettä.",
+    guides: "Ohje",
   },
   cs: {
     unofficial: "Neoficiální. Není od Sony.",
@@ -1183,6 +1195,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Cena je vidět před přidáním",
     checkout: "Pokladna PlayStation",
     checkoutHint: "Bez cookie pro jeden avatar: otevře se pokladna PlayStation s ním. Přihlaste se tam. Všechny zdarma najednou pořád používají cookie.",
+    guides: "Návod",
   },
   sk: {
     unofficial: "Neoficiálne. Nie je od Sony.",
@@ -1268,6 +1281,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Cena je vidieť pred pridaním",
     checkout: "Pokladňa PlayStation",
     checkoutHint: "Bez cookie pre jeden avatar: otvorí sa pokladňa PlayStation s ním. Prihláste sa tam. Všetky zadarmo naraz stále používajú cookie.",
+    guides: "Návod",
   },
   hu: {
     unofficial: "Nem hivatalos. Nem a Sony.",
@@ -1353,6 +1367,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Az ár hozzáadás előtt látszik",
     checkout: "PlayStation pénztár",
     checkoutHint: "Egy avatarnál nem kell cookie: a PlayStation pénztár azzal nyílik meg. Ott jelentkezz be. Az összes ingyenest továbbra is a cookie adja hozzá.",
+    guides: "Útmutató",
   },
   ro: {
     unofficial: "Neoficial. Nu este Sony.",
@@ -1438,6 +1453,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Prețul apare înainte să adaugi",
     checkout: "Casa PlayStation",
     checkoutHint: "Fără cookie pentru un avatar: se deschide casa PlayStation cu el. Autentifică-te acolo. Toate gratuite dintr-o dată folosesc în continuare cookie-ul.",
+    guides: "Ghid",
   },
   bg: {
     unofficial: "Неофициално. Не е Sony.",
@@ -1523,6 +1539,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Цената се вижда преди добавяне",
     checkout: "Каса на PlayStation",
     checkoutHint: "Без бисквитка за един аватар: касата на PlayStation се отваря с него. Влезте там. Всички безплатни наведнъж пак минават през бисквитката.",
+    guides: "Ръководство",
   },
   hr: {
     unofficial: "Neslužbeno. Nije Sony.",
@@ -1608,6 +1625,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Cijena se vidi prije dodavanja",
     checkout: "Blagajna PlayStationa",
     checkoutHint: "Bez kolačića za jedan avatar: otvara se PlayStation blagajna s njim. Prijavite se tamo. Svi besplatni odjednom i dalje koriste kolačić.",
+    guides: "Vodič",
   },
   el: {
     unofficial: "Ανεπίσημο. Όχι η Sony.",
@@ -1693,6 +1711,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Η τιμή φαίνεται πριν την προσθήκη",
     checkout: "Ταμείο PlayStation",
     checkoutHint: "Χωρίς cookie για ένα avatar: ανοίγει το ταμείο της PlayStation με αυτό. Συνδεθείτε εκεί. Όλα τα δωρεάν μαζί χρησιμοποιούν ακόμα το cookie.",
+    guides: "Οδηγός",
   },
   tr: {
     unofficial: "Resmi değil. Sony değil.",
@@ -1778,6 +1797,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Fiyat eklemeden önce görünür",
     checkout: "PlayStation kasası",
     checkoutHint: "Tek avatar için çerez gerekmez: PlayStation kasası onunla açılır. Orada oturum açın. Tüm ücretsizleri birden eklemek hâlâ çerezi kullanır.",
+    guides: "Rehber",
   },
   ru: {
     unofficial: "Неофициально. Не Sony.",
@@ -1863,6 +1883,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Цена видна до добавления",
     checkout: "Касса PlayStation",
     checkoutHint: "Для одного аватара cookie не нужен: откроется касса PlayStation с ним. Войдите там. Все бесплатные сразу по-прежнему через cookie.",
+    guides: "Инструкция",
   },
   uk: {
     unofficial: "Неофіційно. Не Sony.",
@@ -1948,6 +1969,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Ціна видна до додавання",
     checkout: "Каса PlayStation",
     checkoutHint: "Для одного аватара cookie не потрібен: відкриється каса PlayStation із ним. Увійдіть там. Усі безкоштовні одразу й далі через cookie.",
+    guides: "Інструкція",
   },
   ar: {
     unofficial: "غير رسمي. ليس من سوني.",
@@ -2033,6 +2055,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "السعر يظهر قبل الإضافة",
     checkout: "دفع PlayStation",
     checkoutHint: "بدون كوكي لأفاتار واحد: تفتح صفحة دفع PlayStation وهو مضاف. سجّل الدخول هناك. إضافة كل المجاني دفعة واحدة ما زالت تستخدم الكوكي.",
+    guides: "الدليل",
   },
   he: {
     unofficial: "לא רשמי. לא סוני.",
@@ -2118,6 +2141,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "המחיר מופיע לפני ההוספה",
     checkout: "קופת PlayStation",
     checkoutHint: "בלי עוגייה לאווטאר אחד: קופת PlayStation נפתחת איתו. מתחברים שם. הוספת כל החינמיים בבת אחת עדיין דרך העוגייה.",
+    guides: "מדריך",
   },
   ja: {
     unofficial: "非公式。ソニーではありません。",
@@ -2203,6 +2227,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "追加前に価格を表示",
     checkout: "PlayStationの会計",
     checkoutHint: "1体ならCookie不要。PlayStationの会計がそのアバター入りで開きます。そこでサインイン。無料をまとめて入れるには今までどおりCookieです。",
+    guides: "使い方",
   },
   ko: {
     unofficial: "비공식. Sony가 아닙니다.",
@@ -2288,6 +2313,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "담기 전에 가격 표시",
     checkout: "PlayStation 결제",
     checkoutHint: "아바타 하나는 쿠키 없이 됩니다. PlayStation 결제가 담긴 채로 열립니다. 거기서 로그인하세요. 무료를 한 번에 담는 것은 여전히 쿠키를 씁니다.",
+    guides: "안내",
   },
   zh: {
     unofficial: "非官方。不是索尼。",
@@ -2373,6 +2399,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "加入前显示价格",
     checkout: "PlayStation 结账",
     checkoutHint: "单个虚拟形象不用 Cookie：PlayStation 结账会带着它打开。在那里登录。一次性加入全部免费的仍使用 Cookie。",
+    guides: "说明",
   },
   "zh-Hant": {
     unofficial: "非官方。不是 Sony。",
@@ -2458,6 +2485,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "加入前顯示價格",
     checkout: "PlayStation 結帳",
     checkoutHint: "單個虛擬形象不用 Cookie：PlayStation 結帳會帶著它開啟。在那裡登入。一次加入全部免費的仍使用 Cookie。",
+    guides: "說明",
   },
   th: {
     unofficial: "ไม่เป็นทางการ ไม่ใช่ Sony",
@@ -2543,6 +2571,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "เห็นราคาก่อนเพิ่ม",
     checkout: "ชำระเงิน PlayStation",
     checkoutHint: "อวาตาร์เดียวไม่ต้องใช้คุกกี้: หน้าชำระเงิน PlayStation เปิดมาพร้อมอวาตาร์นั้น เข้าสู่ระบบที่นั่น การใส่ฟรีทั้งหมดยังใช้คุกกี้",
+    guides: "คู่มือ",
   },
   id: {
     unofficial: "Tidak resmi. Bukan Sony.",
@@ -2628,6 +2657,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Harga terlihat sebelum ditambahkan",
     checkout: "Kasir PlayStation",
     checkoutHint: "Tanpa cookie untuk satu avatar: kasir PlayStation terbuka dengan avatar itu. Masuk di sana. Menambahkan semua yang gratis sekaligus tetap memakai cookie.",
+    guides: "Panduan",
   },
   ms: {
     unofficial: "Tidak rasmi. Bukan Sony.",
@@ -2713,6 +2743,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Harga kelihatan sebelum ditambah",
     checkout: "Kaunter PlayStation",
     checkoutHint: "Tanpa kuki untuk satu avatar: kaunter PlayStation terbuka dengannya. Log masuk di sana. Semua percuma sekali gus masih guna kuki.",
+    guides: "Panduan",
   },
   vi: {
     unofficial: "Không chính thức. Không phải Sony.",
@@ -2798,6 +2829,7 @@ const STRINGS: Record<Lang, Record<StringKey, string>> = {
     featurePaid: "Giá hiện trước khi thêm",
     checkout: "Thanh toán PlayStation",
     checkoutHint: "Một avatar không cần cookie: trang thanh toán PlayStation mở với avatar đó. Đăng nhập ở đó. Thêm mọi avatar miễn phí một lúc vẫn dùng cookie.",
+    guides: "Hướng dẫn",
   },
 };
 

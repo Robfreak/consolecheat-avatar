@@ -372,6 +372,9 @@ export function AvatarTool() {
             </span>
           </a>
           <div className="flex items-center gap-2 sm:gap-3">
+            <a href="/Guides" className="inline-flex min-h-10 items-center rounded-lg border border-line px-3 text-sm text-steel">
+              {t("guides")}
+            </a>
             <a
               href="https://consolecheat.com/"
               className="hidden min-h-10 items-center gap-1.5 rounded-lg border border-line px-3 text-sm text-steel md:inline-flex"
@@ -540,6 +543,9 @@ export function AvatarTool() {
             </div>
             <p className="mt-2 text-sm text-subtle">{t("missingStores")}</p>
             <p className="mt-3 text-sm leading-relaxed text-muted">{t("checkoutHint")}</p>
+            <a href="/Guides" className="mt-2 inline-flex text-sm text-steel">
+              {t("guides")}
+            </a>
           </div>
 
           <div className="panel rounded-2xl p-4 sm:p-5">
